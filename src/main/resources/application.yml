@@ -2,3 +2,9 @@ spring:
   cloud:
     gateway:
       routes:
+      - id: microservicio-usuario
+        uri: lb://microservicio-usuario
+        predicates:
+          - Path=/HelpDesk/usuarios/**
+        filters:
+          - StripPrefix=2
