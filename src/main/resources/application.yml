@@ -8,3 +8,9 @@ spring:
           - Path=/HelpDesk/usuarios/**
         filters:
           - StripPrefix=2
+      - id: microservicio-tickets
+        uri: lb://microservicio-tickets
+        predicates:
+          - Path=/HelpDesk/tickets/**
+        filters:
+          - StripPrefix=2
