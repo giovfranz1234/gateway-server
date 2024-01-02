@@ -14,3 +14,12 @@ spring:
           - Path=/HelpDesk/tickets/**
         filters:
           - StripPrefix=2
+      globalcors:
+        cors-configurations:
+          '[/**]':
+              allowed-origins: 'http://localhost:4200'
+              allowed-methods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
