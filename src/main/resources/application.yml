@@ -18,6 +18,8 @@ spring:
         cors-configurations:
           '[/**]':
               allowed-origins: 'http://localhost:4200'
+              allowed-headers:
+                - Content-Type
               allowed-methods:
                 - GET
                 - POST
