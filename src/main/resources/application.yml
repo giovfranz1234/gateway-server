@@ -14,6 +14,18 @@ spring:
           - Path=/HelpDesk/tickets/**
         filters:
           - StripPrefix=2
+      - id: microservicio-historial
+        uri: lb://microservicio-historial
+        predicates:
+          - Path=/HelpDesk/historial/**
+        filters:
+          - StripPrefix=2
+      - id: microservicio-equipo
+        uri: lb://microservicio-equipo
+        predicates:
+          - Path=/HelpDesk/equipo/**
+        filters:
+          - StripPrefix=2
       globalcors:
         cors-configurations:
           '[/**]':
