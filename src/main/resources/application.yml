@@ -15,7 +15,6 @@ spring:
         filters:
           - StripPrefix=2
       - id: microservicio-historial
-      - id: microservicio-historial
         uri: lb://microservicio-tickets
         predicates:
           - Path=/HelpDesk/historial/**
