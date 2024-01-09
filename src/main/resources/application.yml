@@ -15,15 +15,16 @@ spring:
         filters:
           - StripPrefix=2
       - id: microservicio-historial
-        uri: lb://microservicio-historial
+      - id: microservicio-historial
+        uri: lb://microservicio-tickets
         predicates:
           - Path=/HelpDesk/historial/**
         filters:
           - StripPrefix=2
       - id: microservicio-equipo
-        uri: lb://microservicio-equipo
+        uri: lb://microservicio-tickets
         predicates:
-          - Path=/HelpDesk/equipo/**
+          - Path=/HelpDesk/equipos/**
         filters:
           - StripPrefix=2
       globalcors:
